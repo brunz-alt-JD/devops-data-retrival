@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)   # Allow frontend
+CORS(app)   # Allow frontend-
 
 @app.route("/data")
 def get_data():
