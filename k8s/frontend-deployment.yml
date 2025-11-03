@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-frontend
+  labels:
+    app: data-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-frontend
+  template:
+    metadata:
+      labels:
+        app: data-frontend
+    spec:
+      containers:
+      - name: data-frontend
+        image: angelinjerusha2005/data-frontend:latest
+        ports:
+        - containerPort: 80

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-backend
+  labels:
+    app: data-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-backend
+  template:
+    metadata:
+      labels:
+        app: data-backend
+    spec:
+      containers:
+      - name: data-backend
+        image: angelinjerusha2005/data-backend:latest
+        ports:
+        - containerPort: 5000
